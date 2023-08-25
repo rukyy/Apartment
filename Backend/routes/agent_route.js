@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const { postAgent } = require("../controller/user")
+const { postAgent } = require("../controller/agent")
 
 router.post('/', postAgent)
 
