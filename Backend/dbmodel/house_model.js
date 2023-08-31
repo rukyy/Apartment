@@ -8,6 +8,6 @@ const houseSchema = new schema ({
     briefdes:{type: String, required:true},
     dimension:{type:String, required:true},
     images:{type:Array}
-})
+},{timestamps:true})
 
 module.exports = mongoose.model("houseInfo", houseSchema)

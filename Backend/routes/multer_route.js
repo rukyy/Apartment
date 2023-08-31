@@ -1,11 +1,22 @@
-const express = require("express")
 const multer = require("multer")
-const upload = multer({dest:'./assets/files'})
-const router = express.Router()
 
-router.post('/', upload.single("file"),function(req, res, next){
-    console.log(req.file)
-    next()
+// configuration of multer storage
+const multerStorage = multer.diskStorage({
+    destination: function(req,file,cb){
+        cb(null, './assets/files')
+    },
+    filename: function(req, file, cb){
+        // let ext = path.extname(file.originalname)
+        cb(null, file.originalname)
+    }
 })
 
-module.exports = router
+const upload = multer({
+    storage : multerStorage
+})
+
+
+
+module.exports = {
+    upload
+}

@@ -22,10 +22,10 @@ app.use(
 // middle ware 
 app.use(cors());
 app.use(express.json()) // middleware to pass req containing a body 
-app.use('/photos',multerRoute)
+
 
 app.use((req, res, next) => {
-    console.log(req.method, req.path,req.body)
+    // console.log(req.body[0])
     next()
 })
 
