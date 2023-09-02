@@ -2,6 +2,8 @@ const  mongoose  = require("mongoose");
 const {uppload} = require("../cloudinary_test");
 const houseInfo = require("../dbmodel/house_model")
 
+
+
 const getHouse = async (req, res) => {
     const { id } = req.params;
     if(!mongoose.Types.ObjectId.isValid){
