@@ -19,7 +19,7 @@ return await cloudinary.uploader.upload(filepath ,{folder:"apartment",
   return (results)
 })
 .catch((error)=>{
-    console.log(JSON.stringify(error,null,2))
+    return (error)
 })
 }
 

@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.use('/', agentRoutes)
+app.use('/agent', agentRoutes)
 app.use('/api',houseRoutes)
 
 mongoose.connect(process.env.URI)
