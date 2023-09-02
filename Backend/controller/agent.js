@@ -24,6 +24,7 @@ const getAgents = async(req, res) =>{
 }
 
  const postAgent = async(req, res) =>{
+    console.log(req.file)
     let secure_url = ""
     await uppload(req.file["destination"]+'/'+req.file["filename"]).then((result)=>{
         if(!result){
